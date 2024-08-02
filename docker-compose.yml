@@ -1,0 +1,25 @@
+version: "3"
+services:
+  db:
+    image: postgres:latest
+    restart: always
+    environment:
+      - POSTGRES_PASSWORD=postgres_password
+  server:
+    build:
+      dockerfile: Dockerfile
+      context: ./server
+    ports:
+      - "5000:5000"
+    # volumes:
+    #   - /app/node_modules
+    #   - ./server:/app
+    environment:
+      - PGUSER=postgres
+      - PGHOST=db
+      - PGDATABASE=postgres
+      - PGPASSWORD=postgres_password
+      - PGPORT=5432
+    depends_on:
+      - db
+    command: ["./wait-for-postgres.sh", "db", "npm", "start"]

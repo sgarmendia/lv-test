@@ -1,0 +1,39 @@
+{
+	"name": "leovegas-test",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"dependencies": {
+		"bcrypt": "^5.1.1",
+		"express": "4.16.3",
+		"jsonwebtoken": "^9.0.2",
+		"pg": "8.0.3",
+		"uuid": "^9.0.0",
+		"zod": "^3.22.2"
+	},
+	"scripts": {
+		"dev": "ts-node-dev index.ts",
+		"start": "node build/index.js",
+		"build": "tsc",
+		"test": "jest ./__test__/index.test.ts"
+	},
+	"author": "SG",
+	"license": "ISC",
+	"devDependencies": {
+		"@types/bcrypt": "^5.0.0",
+		"@types/express": "^4.17.17",
+		"@types/jest": "^29.5.12",
+		"@types/jsonwebtoken": "^9.0.2",
+		"@types/node": "^22.1.0",
+		"@types/pg": "^8.11.6",
+		"@types/supertest": "^6.0.2",
+		"@types/uuid": "^9.0.3",
+		"jest": "^29.7.0",
+		"nodemon": "1.18.3",
+		"supertest": "^7.0.0",
+		"ts-jest": "^29.2.4",
+		"ts-node": "^10.9.2",
+		"ts-node-dev": "^2.0.0",
+		"typescript": "^5.5.4"
+	}
+}
