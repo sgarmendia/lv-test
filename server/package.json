@@ -4,7 +4,7 @@
 	"description": "",
 	"main": "index.js",
 	"dependencies": {
-		"bcrypt": "^5.1.1",
+		"bcryptjs": "^2.4.3",
 		"express": "4.16.3",
 		"jsonwebtoken": "^9.0.2",
 		"pg": "8.0.3",
@@ -13,14 +13,14 @@
 	},
 	"scripts": {
 		"dev": "ts-node-dev index.ts",
-		"start": "node build/index.js",
+		"start": "tsc && node build/index.js",
 		"build": "tsc",
 		"test": "jest ./__test__/index.test.ts"
 	},
 	"author": "SG",
 	"license": "ISC",
 	"devDependencies": {
-		"@types/bcrypt": "^5.0.0",
+		"@types/bcryptjs": "^2.4.6",
 		"@types/express": "^4.17.17",
 		"@types/jest": "^29.5.12",
 		"@types/jsonwebtoken": "^9.0.2",
