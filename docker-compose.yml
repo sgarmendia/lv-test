@@ -5,6 +5,8 @@ services:
     restart: always
     environment:
       - POSTGRES_PASSWORD=postgres_password
+    ports:
+      - 5050:5432
   server:
     build:
       dockerfile: Dockerfile
